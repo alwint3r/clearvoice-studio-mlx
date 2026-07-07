@@ -1,0 +1,26 @@
+.DS_Store
+._*
+
+# Python/runtime noise
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Local packaging/build artifacts
+*.egg-info/
+build/
+dist/
+
+# Downloaded model weights and generated experiment output
+ClearerVoice-Studio/**/checkpoints/
+out/
+clearvoice-cli/**/checkpoints/
+outputs/
+
+# Local source media
+audio_only.m4a

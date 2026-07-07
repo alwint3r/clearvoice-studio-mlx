@@ -1,0 +1,23 @@
+[project]
+name = "clearvoice-cli"
+version = "0.1.0"
+description = "Small command-line wrapper around the local ClearVoice models."
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+  "clearvoice",
+]
+
+[project.scripts]
+cvwrap = "clearvoice_cli.cli:main"
+cvspectrogram = "clearvoice_cli.spectrograms:main"
+
+[tool.uv.sources]
+clearvoice = { path = "../ClearerVoice-Studio/clearvoice", editable = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/clearvoice_cli"]
